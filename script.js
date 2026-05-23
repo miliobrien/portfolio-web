@@ -140,26 +140,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabLinks = document.querySelectorAll('.tab-link');
     const tabContents = document.querySelectorAll('.tab-content');
 
+    // Function to switch tabs and save active tab to localStorage
+    function switchTab(targetId) {
+        // Remove active class from all links and tabs
+        tabLinks.forEach(l => l.classList.remove('active'));
+        tabContents.forEach(t => t.classList.remove('active'));
+        
+        // Add active class to clicked link and corresponding tab
+        document.querySelectorAll(`.tab-link[data-target="${targetId}"]`).forEach(l => l.classList.add('active'));
+        const targetTab = document.getElementById(targetId);
+        if (targetTab) {
+            targetTab.classList.add('active');
+        }
+
+        // Save active tab to localStorage
+        localStorage.setItem('activeTab', targetId);
+
+        // Scroll to top
+        window.scrollTo(0, 0);
+    }
+
     tabLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('data-target');
-            
-            // Remove active class from all links and tabs
-            tabLinks.forEach(l => l.classList.remove('active'));
-            tabContents.forEach(t => t.classList.remove('active'));
-            
-            // Add active class to clicked link and corresponding tab
-            document.querySelectorAll(`.tab-link[data-target="${targetId}"]`).forEach(l => l.classList.add('active'));
-            const targetTab = document.getElementById(targetId);
-            if (targetTab) {
-                targetTab.classList.add('active');
-            }
-
-            // Scroll to top
-            window.scrollTo(0, 0);
+            switchTab(targetId);
         });
     });
+
+    // Restore active tab from localStorage on page load
+    const savedTab = localStorage.getItem('activeTab');
+    if (savedTab) {
+        switchTab(savedTab);
+    }
 
     // 6. Scroll Animation Sequence
     const canvas = document.getElementById("hero-sequence");
