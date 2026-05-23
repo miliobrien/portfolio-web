@@ -2,54 +2,50 @@
 const illustrationImages = [
     "18cddd44-44eb-4cfe-a453-0e6d501291cb.webp",
     "2400510a-074e-4a2f-885d-0ba8fa0da4fc.webp",,,,
-    "File_003(1).png",
+    "File_003(1).webp",
     "IMG_0678.webp",
-    "File_014.jpeg",
-    "File_016(1).png",
-    "File_020.png",
+    "File_014.webp",
+    "File_016(1).webp",
+    "File_020.webp",
     "IMG_0685.webp",
     "IMG_0990.webp",
-    "File_031.png",
-    "File_032.png",
-    "File_033.png",
-    "File_034.png",
-    "File_035.png",
-    "File_038.jpeg",
-    "IMG_0672.WEBP",
+    "File_031.webp",
+    "File_032.webp",
+    "File_033.webp",
+    "File_034.webp",
+    "File_035.webp",
+    "File_038.webp",
+    "IMG_0672.webp",
     "img_1608.webp",
     "IMG_1674.webp",
-    "Untitled_Artwork.png",
-    "bfa77173-e73b-45e5-b6f0-367968968f3a.avif",
-    "09d3d144-bf39-4528-9abd-29c558af3e1d.avif",
-    "imgi_99_59f6b7f0-cc20-40e2-bc3f-a1594f0c876c.png"
+    "Untitled_Artwork.webp",
 ];
 
 const conceptImages = [
-    "imgi_105_7daf5899-da6d-41b3-bd3c-f3c7fecd93dd.png",
-    "imgi_115_7e6412e9-00b9-495b-aeee-51827b37c233.png",
-    "imgi_125_734a4a28-e676-4c3c-bfb0-54c18167e642.png",
-    "imgi_12_4be061a9-5c8a-4531-98d4-3b716d048ad9.png",
-    "imgi_135_ffe0f888-0ecc-47f3-9a90-3fd42f28b91e.jpg",
-    "imgi_146_76345d81-0b01-4131-9032-c8e4e667638c.png",
-    "imgi_167_b7ce0580-330c-4ea5-80cc-c8309dd49f7f.png",
-    "imgi_178_a19c1285-c736-4be9-bcee-9675401a976d.png",
-    "imgi_188_b067fcbb-6ac7-486d-ad28-7dcb28e23e55.png",
-    "imgi_198_629be9c9-4dfd-4f41-b646-53b4095910aa.png",
-    "imgi_208_a41c5a50-5961-4ac0-a27a-94d65e4c5454.png"
+    "imgi_105_7daf5899-da6d-41b3-bd3c-f3c7fecd93dd.webp",
+    "imgi_115_7e6412e9-00b9-495b-aeee-51827b37c233.webp",
+    "imgi_125_734a4a28-e676-4c3c-bfb0-54c18167e642.webp",
+    "imgi_12_4be061a9-5c8a-4531-98d4-3b716d048ad9.webp",
+    "imgi_135_ffe0f888-0ecc-47f3-9a90-3fd42f28b91e.webp",
+    "imgi_146_76345d81-0b01-4131-9032-c8e4e667638c.webp",
+    "imgi_167_b7ce0580-330c-4ea5-80cc-c8309dd49f7f.webp",
+    "imgi_178_a19c1285-c736-4be9-bcee-9675401a976d.webp",
+    "imgi_188_b067fcbb-6ac7-486d-ad28-7dcb28e23e55.webp",
+    "imgi_198_629be9c9-4dfd-4f41-b646-53b4095910aa.webp",
+    "imgi_208_a41c5a50-5961-4ac0-a27a-94d65e4c5454.webp"
 ];
 
 const characterDesignImages = [
-    "imgi_10_ec6e8f59-6185-495c-b728-e1e711a9a132.png",
-    "imgi_20_8961f681-20fd-4dfa-8849-44cb18453b80.png",
-    "imgi_30_6469e396-f7ff-424d-a324-71017d31f130.png",
-    "imgi_41_fd6db499-f590-48e8-ab39-d8c8b093b4d4.png",
-    "imgi_4_1b2e1e42-7dd6-46c1-b017-6ed235fa3850.png",
-    "imgi_52_7dbd3dac-50f7-4b8b-b35e-94e39f47e10d.png",
-    "imgi_63_c76d8b1f-ebcc-44d9-b998-b0e8c9912586.png",
-    "imgi_74_3dd550ff-f730-4544-94fc-7906408476cb.png",
-    "imgi_85_2b269eef-34ff-44f6-ab40-9458471d26b8.png",
-    "imgi_96_8c7b45d5-bbea-4581-8039-e831abcff4b0.png",
-    "imgi_97_8c7b45d5-bbea-4581-8039-e831abcff4b0.png"
+    "imgi_10_ec6e8f59-6185-495c-b728-e1e711a9a132.webp",
+    "imgi_20_8961f681-20fd-4dfa-8849-44cb18453b80.webp",
+    "imgi_30_6469e396-f7ff-424d-a324-71017d31f130.webp",
+    "imgi_41_fd6db499-f590-48e8-ab39-d8c8b093b4d4.webp",
+    "imgi_4_1b2e1e42-7dd6-46c1-b017-6ed235fa3850.webp",
+    "imgi_52_7dbd3dac-50f7-4b8b-b35e-94e39f47e10d.webp",
+    "imgi_63_c76d8b1f-ebcc-44d9-b998-b0e8c9912586.webp",
+    "imgi_74_3dd550ff-f730-4544-94fc-7906408476cb.webp",
+    "imgi_85_2b269eef-34ff-44f6-ab40-9458471d26b8.webp",
+    "imgi_96_8c7b45d5-bbea-4581-8039-e831abcff4b0.webp",
 ];
 
 // Wait for DOM to load
@@ -173,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const frameCount = 88;
         const currentFrame = index => (
-            `assets/sequence/Se va de pantalla${index.toString().padStart(2, '0')}.png`
+            `assets/sequence/Se va de pantalla${index.toString().padStart(2, '0')}.webp`
         );
 
         const images = [];
