@@ -168,11 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Restore active tab from localStorage on page load
-    const savedTab = localStorage.getItem('activeTab');
-    if (savedTab) {
-        switchTab(savedTab);
-    }
+    // (Eliminamos la restauración del localStorage para que siempre inicie en Reel & Illustration)
 
     // 6. Scroll Animation Sequence
     const canvas = document.getElementById("hero-sequence");
