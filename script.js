@@ -180,7 +180,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const context = canvas.getContext("2d");
         const scrollContainer = document.getElementById("hero-scroll-container");
 
-        const frameCount = 88;
+        const totalFrames = 88;
+        // Detect mobile to reduce frame load and save memory
+        const isMobile = window.innerWidth <= 768;
+        const step = isMobile ? 2 : 1;
+        const frameCount = Math.floor(totalFrames / step);
+
         const currentFrame = index => (
             `assets/sequence/Se va de pantalla${index.toString().padStart(2, '0')}.webp`
         );
@@ -190,7 +195,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let i = 0; i < frameCount; i++) {
             const img = new Image();
-            img.src = currentFrame(i);
+            // Multiplicamos por step para saltar frames si es mobile
+            img.src = currentFrame(i * step);
             images.push(img);
         }
 
