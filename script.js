@@ -199,9 +199,11 @@ document.addEventListener('DOMContentLoaded', () => {
         function render() {
             if (!images[sequenceObj.frame] || !images[sequenceObj.frame].complete) return;
             
-            // Adjust canvas dimensions to window
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            // Adjust canvas dimensions to window solo si cambiaron para no vaciar la RAM en mobile
+            if (canvas.width !== window.innerWidth || canvas.height !== window.innerHeight) {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
             
             const img = images[sequenceObj.frame];
             
