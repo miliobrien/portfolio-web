@@ -312,4 +312,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // 8. Intersection Observer for Memory-Efficient Video Autoplay
+    // Play videos only when they are visible on the screen
+    const videos = document.querySelectorAll('video');
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Video is visible, play it if it doesn't have controls
+                if (!entry.target.hasAttribute('controls')) {
+                    entry.target.play().catch(e => console.log('Autoplay prevented:', e));
+                }
+            } else {
+                // Video is not visible, pause it to save memory and battery
+                if (!entry.target.hasAttribute('controls')) {
+                    entry.target.pause();
+                }
+            }
+        });
+    }, { threshold: 0.1 });
+
+    videos.forEach(video => {
+        videoObserver.observe(video);
+    });
+
 });
